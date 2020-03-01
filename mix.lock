@@ -1,0 +1,3 @@
+%{
+  "gen_smtp": {:hex, :gen_smtp, "0.15.0", "9f51960c17769b26833b50df0b96123605a8024738b62db747fece14eb2fbfcc", [:rebar3], [], "hexpm", "29bd14a88030980849c7ed2447b8db6d6c9278a28b11a44cafe41b791205440f"},
+}
