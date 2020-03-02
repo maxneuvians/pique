@@ -174,7 +174,7 @@ defmodule Pique.Smtp do
       Application.get_env(:pique, :auth_handler, Pique.Handlers.AUTH),
       :handle,
       [{username, password}]) do
-        :ok ->
+        {:ok, _} ->
           {:ok, state}
         {:error, msg} ->
           {:error, '530 #{String.to_charlist(msg)}', state}

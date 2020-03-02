@@ -10,6 +10,6 @@ defmodule Pique.TestHandlers.AuthPass do
   @behaviour Pique.Behaviours.Handler
 
   def handle(_state) do
-    :ok
+    {:ok, :empty}
   end
 end

@@ -1,3 +1,8 @@
 defmodule Pique.Behaviours.Handler do
-  @callback handle(state :: term) :: :ok | {:ok, new_state :: term} | {:error, reason :: term}
+  @moduledoc """
+  Behaviour for handlers. Ideally they should return {:ok, state}
+  or {:error, reason} with reason being a string
+  passed back to the SMTP client.
+  """
+  @callback handle(state :: term) :: {:ok, value :: term} | {:error, reason :: term}
 end

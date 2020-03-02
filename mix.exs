@@ -8,7 +8,15 @@ defmodule Pique.MixProject do
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env),
-      deps: deps()
+      deps: deps(),
+      name: "Pique",
+      source_url: "https://github.com/maxneuvians/pique",
+      homepage_url: "https://github.com/maxneuvians/pique",
+      docs: [
+        main: "Pique"
+      ],
+      description: description(),
+      package: package(),
     ]
   end
 
@@ -26,9 +34,20 @@ defmodule Pique.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false},
       {:gen_smtp, "~> 0.15.0"}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+    ]
+  end
+
+  defp description() do
+    "An elixir wrapper around gen_smtp that makes handler and sender registration easier."
+  end
+
+  defp package() do
+    [
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/maxneuvians/pique"}
     ]
   end
 end
