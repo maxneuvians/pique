@@ -42,6 +42,7 @@ defmodule MyApp.SESSender do
 
   def send(state) do
     SES.send_raw_email(state[:data])
+    |> ExAws.request
     {:ok, state[:data], state}
   end
 
