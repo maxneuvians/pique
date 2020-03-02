@@ -65,7 +65,7 @@ Below is a table of each available `handler` and what it does:
 | Data | `data_handler` | `lib/handlers/data.ex` | Handles the body of the email to be sent |
 | Mail | `mail_handler` | `lib/handlers/mail.ex` | Handles the from address |
 | Rcpt | `rcpt_handler` | `lib/handlers/rcpt.ex` | Handles any recipients of the email, including bcc |
-| Send | `sender` | `lib/senders/logger.ex` | Logs the state of the SMTP session instead of sending it |
+| Send | `sender` | `lib/senders/logger.ex` | Handles the sending of the message, by default logs instead of sending it |
 
 ## Installation
 
