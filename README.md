@@ -1,6 +1,6 @@
 # Pique
 
-An elixir wrapper around the excellent [`gen_smtp` server](https://github.com/gen-smtp/gen_smtp) that makes SMTP inspection easier. 
+This project is an elixir wrapper around the excellent [`gen_smtp` server](https://github.com/gen-smtp/gen_smtp) that makes SMTP inspection easier through the registration of handlers. 
 
 ## Rational or Why do I need this?
 
